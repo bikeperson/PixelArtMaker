@@ -1,5 +1,4 @@
-// Select color input
-// Select size input
+
 
 // When size is submitted by the user, call makeGrid()
 
@@ -20,7 +19,8 @@ function makeGrid(rows, col, pickAColor ) {
     }
   document.body.appendChild(grid);
   }
-
+  // Select color input
+  // Select size input
 function getUserInput(){
   var height = document.getElementById("inputHeight").value;
   var width = document.getElementById("inputWidth").value;

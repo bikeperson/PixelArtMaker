@@ -12,7 +12,7 @@ function makeGrid(rows, col, pickAColor ) {
       var x = r.toString();
       var y = c.toString();
       var ID = x + y;
-      cell.id = ID
+      cell.id = ID;
       cell.addEventListener("click", function(){
         document.getElementById(event.srcElement.id).style.background = pickAColor;})
       }
@@ -27,5 +27,3 @@ function getUserInput(){
   var pickAColor = document.getElementById("colorPicker").value;
   makeGrid(height,width,pickAColor);
 }
-
-// Your code goes here!

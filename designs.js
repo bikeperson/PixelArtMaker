@@ -4,7 +4,15 @@
 
 function makeGrid(rows, col) {
 
+  //remove old table
+
+  var oldTable = document.getElementById("canvas");
+  document.body.removeChild(oldTable);
+
+  //create grid
+
   var grid = document.createElement('table');
+  grid.id ="canvas"
   for (var r=0; r<rows; r++){
     var tr = grid.appendChild(document.createElement('tr'));
     for (var c=0; c< col; c++){
@@ -26,5 +34,6 @@ function makeGrid(rows, col) {
 function getUserInput(){
   var height = document.getElementById("inputHeight").value;
   var width = document.getElementById("inputWidth").value;
+  //var oldGrid = grid.removeChild('tr');
   makeGrid(height,width);
 }

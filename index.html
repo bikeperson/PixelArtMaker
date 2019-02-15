@@ -16,14 +16,15 @@
             <label>Grid Width:
               <input type="number" id="inputWidth" name="width" min="1" max = 50 value="1">
             </label>
+            <button type="button" onclick="getUserInput()">Submit</button>
         </form>
 
       <h2>Pick A Color</h2>
         <input type="color" id="colorPicker">
 
       <h2>Design Canvas</h2>
-        <button type="button" onclick="getUserInput()">Submit</button>
 
+      <table id="canvas"></table>
       <script src="designs.js"></script>
 
   </body>

@@ -2,7 +2,7 @@
 
 // This fuction create the grid and add the listener to each element
 
-function makeGrid(rows, col, pickAColor ) {
+function makeGrid(rows, col) {
 
   var grid = document.createElement('table');
   for (var r=0; r<rows; r++){
@@ -13,7 +13,9 @@ function makeGrid(rows, col, pickAColor ) {
       var y = c.toString();
       var ID = x + y;
       cell.id = ID;
+      //add listener and paint different color
       cell.addEventListener("click", function(){
+        var pickAColor = document.getElementById("colorPicker").value;
         document.getElementById(event.srcElement.id).style.background = pickAColor;})
       }
     }
@@ -24,6 +26,5 @@ function makeGrid(rows, col, pickAColor ) {
 function getUserInput(){
   var height = document.getElementById("inputHeight").value;
   var width = document.getElementById("inputWidth").value;
-  var pickAColor = document.getElementById("colorPicker").value;
-  makeGrid(height,width,pickAColor);
+  makeGrid(height,width);
 }
